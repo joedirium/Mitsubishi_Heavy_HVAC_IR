@@ -13,13 +13,14 @@ carrier frequency: 36khz (not 38khz!!!!)
 data transmitted is 64bit, 32 bit of data and 32 bit repeated as inverted bits
 
 init sequence:<br/>
-  pulse 6000<br/>
-  gap 7400<br/>
-  500 pulse<br/>
-  1500/3500 gap for 0/1<br/>
+-pulse 6000<br/>
+-gap 7400<br/>
+the data bits
+-500 pulse<br/>
+-1500/3500 gap for 0/1<br/>
 out sequence<br/>
-  7400 gap<br/>
-  500 pulse<br/>
+-7400 gap<br/>
+-500 pulse<br/>
 
 bit  1-12: 010100000000<br/>
 bit 13-14: fan speed 00 low,10,01 high<br/>
