@@ -26,14 +26,14 @@ out sequence<br/>
 -pulse 500<br/>
 
 bit  1-12: 010100000000<br/>
-bit 13-14: fan speed 00 low,10,01 high<br/>
+bit 13-14: fan speed 00=lowest,10=medium, 01=highest, first bit is lsb<br/>
 bit 15   : air flow swing, 1=on<br/>
 bit 16   : 0<br/>
-bit 17-20: temp 0000,1000-1111<br/>
+bit 17-20: temp 0000=17°C,1000-1111=30°C, first bit is lsb<br/>
 bit 21-23: operation modes 000=auto, 010=cool, 001=heat, 100=dry, 110=fan<br/>
-bit 24   : 0 für off, sonst 1<br/>
+bit 24   : 0 means "power off", 1 means "power on"<br/>
 bit 25-28: 0000<br/>
-bit 29-30: air flow up=auto, 11=down<br/>
+bit 29-30: air flow direction 00=auto, 10=up, 11=down<br/>
 bit 31-32: 10<br/>
 bit 33-64: inversion of 1-32<br/>
 
