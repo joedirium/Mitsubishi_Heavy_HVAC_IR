@@ -13,13 +13,13 @@ carrier frequency: 36khz (not 38khz!!!!)
 data transmitted is 64bit, 32 bit of data and 32 bit repeated as inverted bits
 
 init sequence:<br/>
-	pulse 6000<br/>
-	gap 7400<br/>
-	500 pulse<br/>
-	1480/3460 gap for 0/1<br/>
+  pulse 6000<br/>
+  gap 7400<br/>
+  500 pulse<br/>
+  1500/3500 gap for 0/1<br/>
 out sequence<br/>
-	7400 gap<br/>
-	500 pulse<br/>
+  7400 gap<br/>
+  500 pulse<br/>
 
 bit  1-12: 010100000000<br/>
 bit 13-14: fan speed 00 low,10,01 high<br/>
@@ -33,9 +33,9 @@ bit 29-30: air flow up=auto, 11=down<br/>
 bit 31-32: 10<br/>
 bit 33-64: inversion of 1-32<br/>
 
-A bis issue was to find out that the remote is not using the usual 38khz carrier, but 26khz. I used a small and cheap digitial oszilloscope DS212 to figure this out after all my tries based on 38khz failed. 
+A big issue was to find out that the remote is not using the usual 38khz carrier, but 36khz. I used a small and cheap digitial oszilloscope DS212 to figure this out after all my tries based on 38khz failed. 
 
 So an example to turn of a running air condition with Tasmota is:<br/> 
-irsend 36,6000,7500,500,1500,500,3500,500,1500,500,3500,500,1500,500,1500,500,1500,500,1500,500,1500,500,1500,500,1500,500,1500,500,1500,500,1500,500,1500,500,1500,500,3500,500,1500,500,1500,500,3500,500,1500,500,3500,500,1500,500,1500,500,1500,500,1500,500,1500,500,1500,500,1500,500,1500,500,3500,500,1500,500,3500,500,1500,500,3500,500,1500,500,3500,500,3500,500,3500,500,3500,500,3500,500,3500,500,3500,500,3500,500,3500,500,3500,500,3500,500,3500,500,1500,500,3500,500,3500,500,1500,500,3500,500,1500,500,3500,500,3500,500,3500,500,3500,500,3500,500,3500,500,3500,500,3500,500,1500,500,3500,500,7500,500
+```irsend 36,6000,7500,500,1500,500,3500,500,1500,500,3500,500,1500,500,1500,500,1500,500,1500,500,1500,500,1500,500,1500,500,1500,500,1500,500,1500,500,1500,500,1500,500,3500,500,1500,500,1500,500,3500,500,1500,500,3500,500,1500,500,1500,500,1500,500,1500,500,1500,500,1500,500,1500,500,1500,500,3500,500,1500,500,3500,500,1500,500,3500,500,1500,500,3500,500,3500,500,3500,500,3500,500,3500,500,3500,500,3500,500,3500,500,3500,500,3500,500,3500,500,3500,500,1500,500,3500,500,3500,500,1500,500,3500,500,1500,500,3500,500,3500,500,3500,500,3500,500,3500,500,3500,500,3500,500,3500,500,1500,500,3500,500,7500,500```
 
 As you can see, there is a special end mark in this raw sequence. So normal bit coding with tasmota will probably not work.
