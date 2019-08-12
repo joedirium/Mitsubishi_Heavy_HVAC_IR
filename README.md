@@ -3,11 +3,11 @@ description of the IR protocol of Mitsubishi Heavy air conditioners IR remote co
 
 I wanted to control my air conditioners with ESP8266 based Tasmota devices. Unfortunately I found that the built in support for Mitsubische HVAR IR does not work with my air conditioner. This is probaly because the supported protocol is for Mitsubishi Electric devices. Similar name, but different companies. 
 
-So started reverse engeneering the PJA502A704AA remote control.
+So started reverse engeneering the PJA502A704AA remote control.<br/> 
 ![front picture](https://github.com/joedirium/Mitsubishi_Heavy_HVAC_IR/blob/master/Mitsubishi_remote_PJA502A704AA_front.jpg)
 ![back picture](https://github.com/joedirium/Mitsubishi_Heavy_HVAC_IR/blob/master/Mitsubishi_remote_PJA502A704AA_back.jpg)
 
-This is what I learned:
+This is what I learned:<br/>
 
 carrier frequency: 36khz (not 38khz!!!!)
 data transmitted is 64bit, 32 bit of data and 32 bit repeated as inverted bits
