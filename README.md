@@ -16,11 +16,11 @@ init sequence:<br/>
 -pulse 6000<br/>
 -gap 7400<br/>
 the data bits
--500 pulse<br/>
--1500/3500 gap for 0/1<br/>
+-pulse 500<br/>
+-gap 1500/3500 for bit 0/1<br/>
 out sequence<br/>
--7400 gap<br/>
--500 pulse<br/>
+-gap 7400<br/>
+-pulse 500<br/>
 
 bit  1-12: 010100000000<br/>
 bit 13-14: fan speed 00 low,10,01 high<br/>
