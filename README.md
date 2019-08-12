@@ -7,6 +7,9 @@ So started reverse engeneering the PJA502A704AA remote control.<br/>
 ![front picture](https://github.com/joedirium/Mitsubishi_Heavy_HVAC_IR/blob/master/Mitsubishi_remote_PJA502A704AA_front.jpg)
 ![back picture](https://github.com/joedirium/Mitsubishi_Heavy_HVAC_IR/blob/master/Mitsubishi_remote_PJA502A704AA_back.jpg)
 
+The following information is about my personal experience without any liability or guaranties and may be faulty.
+Use this information at you own risk only.
+
 This is what I learned:<br/>
 
 carrier frequency: 36khz (not 38khz!!!!)
@@ -14,12 +17,12 @@ data transmitted is 64bit, 32 bit of data and 32 bit repeated as inverted bits
 
 init sequence:<br/>
 -pulse 6000<br/>
--gap 7400<br/>
+-gap 7500<br/>
 the data bits
 -pulse 500<br/>
 -gap 1500/3500 for bit 0/1<br/>
 out sequence<br/>
--gap 7400<br/>
+-gap 7500<br/>
 -pulse 500<br/>
 
 bit  1-12: 010100000000<br/>
